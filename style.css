@@ -1,8 +1,7 @@
 body{
     background-image: url("resources/pexel.jpg") ;
     background-size: cover;
-    background-color: rgba(255 255 255 0.5);
-    background-blend-mode: lighten;
+
     font-family: "medel", "ariel";
 
 }
