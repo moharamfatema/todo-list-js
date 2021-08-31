@@ -1,0 +1,74 @@
+body{
+    background-image: url("resources/pexel.jpg") ;
+    background-size: cover;
+    background-color: rgba(255 255 255 0.5);
+    background-blend-mode: lighten;
+    font-family: "medel", "ariel";
+
+}
+
+#main{
+    display: block;
+    margin: 50px 15%;
+    padding: 50px 15%;
+    background-color:rgba(0,0,0,0.5);
+    border-radius: 10px;
+    box-shadow: 3px 3px 15px 4px rgba(0, 0 ,0, 0.2);
+    justify-content: center;
+    text-align: center;
+}
+#main h1{
+    color: whitesmoke;
+    font-size: 5em;
+}
+#content{
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+#addnew label{
+    display: block;
+    font-weight: bolder;
+}
+#addnew input{
+    box-shadow: 3px 3px 15px 4px rgba(0, 0 ,0, 0.2);
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 30px 0;
+}
+#add{
+    color: white;
+    background-color: rgba(0,0,0,0.6);
+    background-size: cover;
+    border-radius: 5px;
+    border: 0;
+}
+#add:hover{
+    background-color: rgba(0,0,0,0.5);
+}
+#add:active{
+    background-color: rgba(0,0,0,0.9);
+}
+
+#listdiv{
+    display: table;
+}
+ul{
+    list-style-type: none;
+}
+#list li{
+    box-shadow: 3px 3px 15px 4px rgba(0, 0 ,0, 0.2);
+    background-color: white;
+    border-bottom: 1px solid grey;
+    color: black;
+    padding: 7% ;
+}
+#list li:hover{
+    background-color: rgba(255,255,255,0.8);
+}
+#list li.done{
+    color: grey;
+    text-decoration: line-through;
+}
