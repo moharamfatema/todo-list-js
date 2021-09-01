@@ -1,41 +1,50 @@
+
 body{
     background-image: url("resources/pexel.jpg") ;
     background-size: cover;
-
+    min-height: 100vh;
     font-family: "medel", "ariel";
 
 }
 
 #main{
-    display: block;
-    margin: 50px 15%;
-    padding: 50px 15%;
+    display: table;
+    margin:50px auto;
+    padding:5vh 5%;
     background-color:rgba(0,0,0,0.5);
     border-radius: 10px;
     box-shadow: 3px 3px 15px 4px rgba(0, 0 ,0, 0.2);
-    justify-content: center;
+    /*justify-content: center;*/
     text-align: center;
 }
 #main h1{
     color: whitesmoke;
-    font-size: 5em;
+    font-size: 10vw;
 }
 #content{
     display: flex;
     flex-direction: column;
     color: whitesmoke;
-    justify-content: center;
+    justify-content: space-evenly;
     margin-bottom: 50px;
+    width: 75vw;
+
+
 }
 #addnew label{
     display: block;
     font-weight: bolder;
+    font-size: 3vw;
 }
 #addnew input{
     box-shadow: 3px 3px 15px 4px rgba(0, 0 ,0, 0.2);
     display: inline-block;
-    padding: 10px 20px;
+    padding: 20px 20px;
     margin: 30px 0;
+    font-size: 2vw;
+    justify-content: center;
+    border-radius: 5px;
+    border: 0;
 }
 #add{
     color: white;
@@ -45,7 +54,7 @@ body{
     border: 0;
 }
 #add:hover{
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.3);
 }
 #add:active{
     background-color: rgba(0,0,0,0.9);
@@ -55,6 +64,8 @@ body{
     display: table;
 }
 ul{
+    display: flex;
+    flex-direction: column-reverse;
     list-style-type: none;
 }
 #list li{
@@ -62,12 +73,18 @@ ul{
     background-color: white;
     border-bottom: 1px solid grey;
     color: black;
+    justify-content: center;
     padding: 7% ;
+    font-size: 3vw;
 }
 #list li:hover{
     background-color: rgba(255,255,255,0.8);
 }
-#list li.done{
+#list li.done {
     color: grey;
     text-decoration: line-through;
+    order:-1;
+}
+#list li:active{
+    background-color: rgba(255,255,255,0.6);
 }
