@@ -15,7 +15,6 @@ const list = [];
 
 restore();
 
-
 const input = document.getElementById("textbox");
 const addButton = document.getElementById("add");
 document.getElementsByTagName("form")[0].addEventListener("submit",e => {
@@ -100,3 +99,7 @@ function restore(){
         addNew(Item);
     }
 }
+document.getElementById("clear").addEventListener('click',e => {
+    localStorage.clear();
+    window.location.reload(false);
+})
