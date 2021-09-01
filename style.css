@@ -1,5 +1,9 @@
-
+@font-face {
+    font-family: Medel;
+    src: url("resources/Medel.ttf");
+}
 body{
+
     background-image: url("resources/pexel.jpg") ;
     background-size: cover;
     min-height: 100vh;
