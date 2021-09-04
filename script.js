@@ -35,10 +35,15 @@ function addNew(Item){
     list.push(Item);
     Item.li.id = "Li"+list.indexOf(Item).toString();
     document.getElementById("list").append(Item.li);
+
     handleClick(Item);
     handleContext(Item);
 }
-
+function addEditButton(Item){
+    const edit = document.createElement('button');
+    edit.innerHTML = "<img alt='edit' src='resources/edit.png'/>";
+    Item.li.appendChild(edit);
+}
 function itemAddLi(Item){
     let li = document.createElement("li");
     li.innerText = Item.value;
@@ -47,8 +52,11 @@ function itemAddLi(Item){
     }else {
         li.classList.remove("done");
     }
-    console.log(li)
     Item.li = li;
+    addEditButton(Item);
+
+    console.log(li)
+
     return Item.li;
 }
 function handleClick(Item){

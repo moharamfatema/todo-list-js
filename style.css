@@ -7,18 +7,18 @@ body{
     background-image: url("resources/pexel.jpg") ;
     background-size: cover;
     min-height: 100vh;
-    font-family: "medel", "ariel";
-
+    font-family: "medel", Arial;
+    margin: 0;
 }
 
 #main{
-    display: table;
-    margin:50px auto;
+    display: flex;
+    flex-direction: column;
+    margin:50px 50px;
     padding:5vh 5%;
     background-color:rgba(0,0,0,0.5);
     border-radius: 10px;
     box-shadow: 3px 3px 15px 4px rgba(0, 0 ,0, 0.2);
-    /*justify-content: center;*/
     text-align: center;
 }
 #main h1{
@@ -29,7 +29,8 @@ body{
     display: flex;
     flex-direction: column;
     color: whitesmoke;
-    justify-content: space-evenly;
+    align-content: space-between;
+    justify-content: center;
     margin-bottom: 50px;
     width: 75vw;
 }
@@ -71,6 +72,7 @@ ul{
     list-style-type: none;
 }
 #list li{
+    display: inline-flex;
     box-shadow: 3px 3px 15px 4px rgba(0, 0 ,0, 0.2);
     background-color: white;
     border-bottom: 1px solid grey;
@@ -85,11 +87,23 @@ ul{
 #list li.done {
     color: grey;
     text-decoration: line-through;
-    order:-1;
+
 }
 #list li:active{
     background-color: rgba(255,255,255,0.6);
 }
+
+li button{
+    justify-self: flex-end;
+    align-self: flex-end;
+    flex-shrink: 1;
+}
+button img{
+    height: 3vw;
+    width: auto;
+}
+
+
 .danger{
     background-color: rgba(255,0,0,0.8);
     color: white;
@@ -107,4 +121,11 @@ ul{
 }
 .danger:active{
     background-color: rgba(100,0,0,0.9);
+}
+footer{
+    justify-self: flex-end;
+    margin-top: 30px;
+}
+footer a{
+    color: whitesmoke;
 }
