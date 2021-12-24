@@ -39,21 +39,17 @@ function addNew(Item){
     handleClick(Item);
     handleContext(Item);
 }
-function addEditButton(Item){
-    const edit = document.createElement('button');
-    edit.innerHTML = "<img alt='edit' src='resources/edit.png'/>";
-    Item.li.appendChild(edit);
-}
+
 function itemAddLi(Item){
     let li = document.createElement("li");
-    li.innerText = Item.value;
+    li.innerHTML = `<h2>${Item.value}</h2>
+<button><img src="resources/edit.png" alt="edit"></button>`;
     if (Item.isDone){
         li.classList.add("done");
     }else {
         li.classList.remove("done");
     }
     Item.li = li;
-    addEditButton(Item);
 
     console.log(li)
 
