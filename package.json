@@ -1,12 +1,15 @@
 {
-  "name": "todoList",
+  "name": "todo-list",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple todo list app",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "todo",
+    "list"
+  ],
   "author": "",
   "license": "ISC"
 }
