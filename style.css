@@ -2,13 +2,21 @@
     font-family: Medel;
     src: url("resources/Medel.ttf");
 }
+html{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
 body{
 
     background-image: url("resources/pexel.jpg") ;
     background-size: cover;
-    min-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
     font-family: "medel", Arial;
     margin: 0;
+    padding: 5em;
 }
 
 button{
@@ -18,32 +26,29 @@ button{
 #main{
     display: flex;
     flex-direction: column;
-    margin:50px 50px;
-    padding:5vh 5%;
-    max-width: 90%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin:auto;
+    padding:.5em;
+    min-width: max-content;
+    max-width: 75%;
+    width: fit-content, -webkit-fit-content, -moz-fit-content;
     background-color:rgba(0,0,0,0.5);
     border-radius: 10px;
     box-shadow: 3px 3px 15px 4px rgba(0, 0 ,0, 0.2);
     text-align: center;
 }
 
-@media (min-width: 600px){
-    #main{
-        max-width: 60vw;
-    }
-}
 @media (min-width: 1024px){
-    #main{
-        max-width: 50vw;
-    }
     #main h1{
-        font-size: 7rem;
+        font-size: 5rem;
     }
 }
 
 #main h1{
     color: whitesmoke;
-    font-size: 5rem;
+    font-size: 3rem;
 }
 #content{
     display: flex;
@@ -51,36 +56,45 @@ button{
     color: whitesmoke;
     justify-content: space-evenly;
     margin : 0 auto;
-    width: 75%;
+    max-width: 75%;
+    gap: 0.5rem;
+    width: 100%;
 }
 
-#content form{
-    margin-bottom: 2rem;
-}
 
-#addnew label, #addnew input, #addnew button{
-    margin : 0.5rem auto;
+#addnew form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    /* margin: 0.5rem auto; */
 }
 #addnew label{
     display: block;
     font-weight: bolder;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 #addnew input{
     box-shadow: 3px 3px 15px 4px rgba(0, 0 ,0, 0.2);
     display: inline-block;
     padding: 1rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
     justify-content: center;
     border-radius: 5px;
     border: 0;
-    width: 85%;
+}
+#addnew input.text{
+    width: 58%;
 }
 #add{
     color: white;
     background-color: rgba(0,0,0,0.6);
     background-size: cover;
     border-radius: 5px;
+    margin: auto;
+    padding: 1rem;
+    width: max-content, -webkit-max-content, -moz-max-content;
     border: 0;
 }
 #add:hover{
@@ -96,8 +110,8 @@ button{
 ul{
     display: flex;
     flex-direction: column-reverse;
+    width: 100%;
     list-style-type: none;
-    margin: 0 0 2rem 0;
     padding: 0;
 }
 #list li{
@@ -107,8 +121,9 @@ ul{
     border-bottom: 1px solid grey;
     color: black;
     justify-content: center;
-    padding: 7% ;
-    font-size: 2rem;
+    width: 100%;
+    padding: 0.5em;
+    font-size: .8em;
 }
 #list li:hover{
     background-color: rgba(255,255,255,0.8);
@@ -116,7 +131,7 @@ ul{
 #list li.done {
     color: grey;
     text-decoration: line-through;
-
+    order: -1;
 }
 #list li:active{
     background-color: rgba(255,255,255,0.6);
@@ -127,11 +142,6 @@ li button{
     align-self: flex-end;
     flex-shrink: 1;
 }
-button img{
-    height: 3vw;
-    width: auto;
-}
-
 
 .danger{
     background-color: rgba(255,0,0,0.8);
@@ -139,8 +149,9 @@ button img{
     font-size: 1rem;
     border-radius: 5px;
     border: 0;
-    padding: 5%;
-    margin: 10px auto;
+    padding: 3% 5%;
+    margin: 0 auto;
+
     font-weight: bolder;
     box-shadow: 3px 3px 15px 4px rgba(0, 0 ,0, 0.2);
 }
@@ -149,4 +160,8 @@ button img{
 }
 .danger:active{
     background-color: rgba(100,0,0,0.9);
+}
+.text{
+    display: flex;
+    gap: 1rem;
 }

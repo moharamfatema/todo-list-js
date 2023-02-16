@@ -42,8 +42,7 @@ function addNew(Item){
 
 function itemAddLi(Item){
     let li = document.createElement("li");
-    li.innerHTML = `<h2>${Item.value}</h2>
-<button><img src="resources/edit.png" alt="edit"></button>`;
+    li.innerHTML = `<h2>${Item.value}</h2>`;
     if (Item.isDone){
         li.classList.add("done");
     }else {

@@ -1,5 +1,6 @@
 {
   "name": "todo-list",
+  "homepage": "/todo-list-js",
   "version": "1.0.0",
   "description": "Simple todo list app",
   "main": "index.js",
